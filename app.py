@@ -74,7 +74,7 @@ def predict():
         df['text_reviews_count'] = df['text_reviews_count'].astype(int)
 
         # Predict using the loaded pipeline
-        prediction = model.predict(df)
+        prediction = model.predict(df) 
 
         return jsonify({'average_rating': float(prediction[0])})
 
